@@ -1,0 +1,49 @@
+h1{
+    
+    text-align: center;
+    background-color: rgba(24, 24, 226, 0.541);
+    
+}
+input[type="text"], input[type="email"], input[type="password"] {
+      width: 80%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+#login{
+    border-radius: 2%;
+    text-align: center;
+    background-color: rgba(249, 249, 252, 0.938);
+    height: 600px;
+    width: 400px;
+    margin-left: 450px;
+    }
+button{
+    height: 30px;
+    width: 80px;
+    border-radius: 4px;
+    background-color: rgb(189, 194, 189);
+    border: none;
+}   
+#google{
+    background-color: rgba(221, 8, 8, 0.884);
+    width: 85%;
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+    color: white;
+    font-size: 14px;
+    margin: 20px 0;
+} 
+#fb{
+    width: 85%;
+    height: 40px;
+    border-radius: 7px;
+    border: none;
+    color: white;
+    font-size: 14px;
+    margin: 20px 0;
+    background-color: rgba(24, 24, 226, 0.541); 
+}
