@@ -1,161 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        input{
-            height: 35px;
-            width: 300px;
-            border-radius: 7px;
-            border: none;
-            background-color: papayawhip;
-            margin: 10px;
-
-        }
-        button{
-            height: 30px;
-            margin: 10px;
-            border-radius: 7px;
-            border: none;
-            background-color: rgb(212, 66, 66);
-        }
-       h1{
-        margin-left: 90px;
-        color: rgb(248, 173, 138);
-       }
-        ul{
-            background-color: antiquewhite;
-            height: 40px;
-            padding-top: 20px;
-            position: sticky;
-            top: 0;
-            display: flex;
-            gap: 100px;
-        }
-        li{
-            width: 130px;
-        }
-        #op{
-            background-color: rgba(250, 235, 215, 0.767);
-            
-            width: 400px;
-            height: 500px;
-            border-radius: 10px;
-            text-align: center;
-            
-        }
-        #div{
-            /* background-size: cover;
-            background-image: url("original.gif");
-            background-position: top;
-            background-attachment: fixed; */
-            
-    background-image: linear-gradient(
-        rgba(255, 255, 255, 0.3),
-        rgba(255, 255, 255, 0.3)
-    ), url("Untitled-Website-4.png");
-
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-       
-        #result{
-        font-size: 15px;
-        text-align: center;
-        justify-content: center;
-        margin-top: 20px;
-        font-weight: bold;
-        border-radius: 10px;
-        margin: 20px auto;
-        }
-        #result{
-            background-color: rgba(243, 84, 84, 0.603);
-            display: flex;
-           align-items: center;
-            text-align: center;
-        }
-        #p{
-            margin: 20px auto;
-            border-radius: 10px;
-            align-items: center;
-            text-align: center;
-            background-color: bisque;
-            
-        }
-        footer {
-    background-color: antiquewhite;
-    text-align: center;
-    padding: 15px;
-    margin-top: 20px;
-}
-
-footer p {
-    margin: 5px;
-}
-section {
-    padding: 40px;
-    text-align: center;
-}
-
-#about {
-    background-color: antiquewhite;
-}
-
-#health {
-    background-color: bisque;
-}
-
-section h2 {
-    color: rgb(212, 66, 66);
-}
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple BMI calculator and wellness tips website.">
+  <title>Bloom Wellness | BMI Calculator</title>
+  <link rel="stylesheet" href="index.css">
 </head>
-<body>
-    <div id="div">
-    <ul>
-        <li><a id="logo">BMI Calculator</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#health">Health Tips</a></li>
-        <li><a href="">sign in</a></li>
-    </ul>
-    <div id="op">
-    <h1>BMI Calculator</h1>
-    <input id="height" type="text" placeholder="Enter your Height"><span style="color: rgb(252, 238, 238);">cm</span>
-    <input id="weight" type="text" placeholder="Enter your weight"><span style="color: rgb(250, 237, 237);">kg</span>
-    <button>Calculate</button> <button id="reset">Reset</button>
-    <p id="result"></p>
-    <p id="p"></p>
+<body class="home-page">
+<header class="site-header">
+  <nav class="navbar" aria-label="Main navigation">
+    <a class="brand" href="home.html"><span class="brand-mark">✿</span> Bloom Wellness</a>
+    <div class="nav-links">
+      <a href="#calculator">BMI Calculator</a><a href="#about">About</a><a href="#health">Health Tips</a><a class="nav-cta" href="index.html">Sign in</a>
     </div>
+  </nav>
+</header>
+<main>
+  <section class="hero" id="calculator">
+    <div class="hero-copy">
+      <p class="eyebrow">A little care, every day</p>
+      <h1>Your wellness<br><span>starts here.</span></h1>
+      <p class="hero-description">Use this simple calculator to explore a BMI estimate, then find a few gentle reminders for everyday wellbeing.</p>
+      <div class="hero-note"><span aria-hidden="true">♡</span> Your health is more than one number.</div>
     </div>
-    <footer>
-    <p>© 2026 BMI Calculator</p>
-    <p>Made with HTML, CSS & JavaScript</p>
-</footer>
-    <section id="about">
-    <h2>About BMI Calculator</h2>
-    <p>
-        This BMI Calculator helps you calculate your Body Mass Index
-        using your height and weight.
-    </p>
-    <p>
-        Enter your height in centimeters and weight in kilograms,
-        then click Calculate.
-    </p>
-</section>
-    <section id="health">
-    <h2>Health Tips</h2>
-
-    <ul>
-        <li>Eat a balanced variety of foods.</li>
-        <li>Drink enough water throughout the day.</li>
-        <li>Get regular physical activity.</li>
-        <li>Get enough sleep and maintain a regular sleep schedule.</li>
-        <li>Talk to a healthcare professional if you have health concerns.</li>
-    </ul>
-</section>
-   <script src="./index.js"></script>
+    <div class="calculator-card">
+      <div class="card-heading"><span class="card-icon" aria-hidden="true">✿</span><div><p class="eyebrow">Quick check</p><h2>BMI Calculator</h2></div></div>
+      <form id="bmi-form" novalidate>
+        <label for="height">Height <span>(centimetres)</span></label>
+        <div class="input-wrap"><input id="height" name="height" type="number" inputmode="decimal" min="1" max="300" placeholder="e.g. 170" required><span class="unit">cm</span></div>
+        <label for="weight">Weight <span>(kilograms)</span></label>
+        <div class="input-wrap"><input id="weight" name="weight" type="number" inputmode="decimal" min="1" max="500" placeholder="e.g. 60" required><span class="unit">kg</span></div>
+        <p id="form-message" class="form-message" role="alert" aria-live="polite"></p>
+        <div class="button-row"><button class="button button-primary" type="submit">Calculate BMI</button><button class="button button-secondary" type="reset" id="reset">Reset</button></div>
+      </form>
+      <div id="result-panel" class="result-panel" hidden aria-live="polite">
+        <p class="result-label">Your BMI estimate</p><p id="result" class="result-number">—</p><p id="result-category" class="result-category"></p>
+        <p class="result-disclaimer">BMI is a screening estimate, not a diagnosis. Adult ranges are not suitable for interpreting BMI in children or teens; age-specific guidance may be needed.</p>
+      </div>
+    </div>
+    <div class="decor decor-one" aria-hidden="true">✦</div><div class="decor decor-two" aria-hidden="true">♡</div>
+  </section>
+  <section class="content-section about-section" id="about">
+    <div class="section-symbol" aria-hidden="true">✿</div><p class="eyebrow">A simple starting point</p><h2>About this calculator</h2>
+    <p>BMI stands for Body Mass Index. It is calculated from height and weight and can be one piece of a broader health assessment. It cannot describe your whole health, fitness, or wellbeing.</p>
+  </section>
+  <section class="content-section health-section" id="health">
+    <p class="eyebrow">Small steps count</p><h2>Everyday wellness reminders</h2>
+    <div class="tip-grid">
+      <article class="tip-card"><span aria-hidden="true">💧</span><h3>Stay hydrated</h3><p>Keep water nearby and drink regularly throughout your day.</p></article>
+      <article class="tip-card"><span aria-hidden="true">🥗</span><h3>Eat a variety</h3><p>Enjoy a variety of foods that help you feel nourished and satisfied.</p></article>
+      <article class="tip-card"><span aria-hidden="true">🌿</span><h3>Move in ways you enjoy</h3><p>Choose activities that feel good to you, at a pace that suits you.</p></article>
+      <article class="tip-card"><span aria-hidden="true">🌙</span><h3>Make room for rest</h3><p>A regular sleep routine can support your mood, focus, and energy.</p></article>
+    </div>
+    <p class="gentle-note">If you have concerns about your health, a qualified healthcare professional can help you understand what is right for you.</p>
+  </section>
+</main>
+<footer class="site-footer"><a class="brand footer-brand" href="home.html"><span class="brand-mark">✿</span> Bloom Wellness</a><p>Made with care · HTML, CSS &amp; JavaScript</p><p class="copyright">© 2026 Bloom Wellness</p></footer>
+<script src="index.js"></script>
 </body>
 </html>
